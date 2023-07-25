@@ -52,6 +52,16 @@ class ProductController extends Controller
       return view('products', compact('products','cat','cnt'));
     }
 	
+	public function productSearch(Request $request)
+	{
+		$cat = $request->ff;
+		//echo $cat;
+		$products = Product::where('name','LIKE','%'.$cat.'%')->get(); 
+		
+		$cnt= $products->count();
+	  
+      return view('products', compact('products','cat','cnt'));
+	}
 	
 	 public function update(Request $request)
     {

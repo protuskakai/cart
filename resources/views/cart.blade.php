@@ -11,11 +11,11 @@
                               <p class="text-green-800">{{ $message }}</p>
                           </div>
                       @endif
-                        <h3 class="text-3xl text-bold">Cart List</h3>
+                        <p class="text-2xl text-bold">Cart List</p>
                       <div class="flex-1">
                         <table class="w-full text-sm lg:text-base" cellspacing="0">
                           <thead>
-                            <tr class="h-12 uppercase">
+                            <tr class="h-12 uppercase" style="border-bottom:1px solid blue" >
                               <th class="hidden md:table-cell"></th>
                               <th class="text-left">Name</th>
                               <th class="pl-5 text-left lg:text-right lg:pl-0">
@@ -32,7 +32,7 @@
 							
                               <td class="hidden pb-4 md:table-cell">
                                 <a href="#">
-                                  <img src="./images/{{ $item->attributes->image }}" class="w-20 rounded" alt="Thumbnail">
+                                  <img src="./images/{{ $item->attributes->image }}" class="w-20 rounded" alt="">
                                 </a>
                               </td>
                               <td>
@@ -55,6 +55,7 @@
                                   </div>
                                 </div>
                               </td>
+
                               <td class="hidden text-right md:table-cell">
                                 <span class="text-sm font-medium lg:text-base">
                                     Ksh {{ $item->price }}
@@ -72,15 +73,15 @@
                             </tr>
 							<tr><td></td> </tr>
 							<tr><td></td> </tr>
-							<tr><td></td> </tr>
+							
 							
                             @endforeach
-                             
+                             <tr><td></td><td></td><td></td><td align=right><b> Total:</B> Ksh {{ Cart::getTotal() }}</td> </tr>
                           </tbody>
                         </table>
 						
                         <div >
-                         Total: Ksh {{ Cart::getTotal() }}
+                        
 						 <br>
                         </div>
                         <div>

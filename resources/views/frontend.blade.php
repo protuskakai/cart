@@ -55,7 +55,7 @@
 <body>
     <div  class="bg-white">
         <header>
-            <div class="container px-6 py-3 mx-auto">
+            <div class="container px-6 py-1 mx-auto">
                 <div class="flex items-center justify-between">
                     
                     
@@ -83,6 +83,10 @@
 						
                     </div>
                 </nav>
+				
+				
+
+
             </div>
         </header>
         
