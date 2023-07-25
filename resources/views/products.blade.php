@@ -25,12 +25,13 @@
 	   
         <div class="grid grid-cols-1 gap-6 mt-6   sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             @foreach ($products as $product)
-            <div class="w-full max-w-sm mx-auto drop-shadow-2xl border-b-4 border-r-1 border-t-2 border-blue-200 px-16  overflow-hidden bg-fuchsia-300  rounded-md shadow-md">
+                     <div class="w-full max-w-none mx-auto drop-shadow-2xl     bg-green-100     border-b-4 border-r-1 border-t-2 border-blue-200 px-1  overflow-hidden bg-fuchsia-300  rounded-md shadow-md">				
 			<p><br></p>
                 <a  class="img" href=""><img src="./images/{{$product->image}}" alt="" id="{{$product->image}}" " class="w-auto max-h-60"></a>
                 <div class="flex   w-full  bg-cover">
                 </div>
-                <div class="px-5 py-3">
+  
+				<div class="px-5 py-3">
                     <h6 class="text-gray-700 uppercase">{{ $product->name }}</h6>
 					<p class="text-gray-700">{{'(Qty Avail:'.$product->qty.')' }}</p>
                     <span class="mt-2 text-red-500">Ksh {{ $product->price }}</span>
